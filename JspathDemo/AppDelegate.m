@@ -45,7 +45,7 @@
         }
         
     }];
-//    [JSPatch setupDevelopment];
+    [JSPatch setupDevelopment];
     
     [JSPatch sync];
     
