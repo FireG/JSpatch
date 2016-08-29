@@ -15,6 +15,9 @@
 		BC4F1F751D73CE0800DAE2DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC4F1F731D73CE0800DAE2DF /* LaunchScreen.storyboard */; };
 		BC4F1F801D73CE0800DAE2DF /* JspathDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4F1F7F1D73CE0800DAE2DF /* JspathDemoTests.m */; };
 		BC4F1F8B1D73CE0800DAE2DF /* JspathDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC4F1F8A1D73CE0800DAE2DF /* JspathDemoUITests.m */; };
+		BC4F1F991D73D07A00DAE2DF /* JSPatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4F1F981D73D07A00DAE2DF /* JSPatch.framework */; };
+		BC4F1F9B1D73D19F00DAE2DF /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4F1F9A1D73D19F00DAE2DF /* JavaScriptCore.framework */; };
+		BC4F1F9D1D73D2B100DAE2DF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4F1F9C1D73D2B100DAE2DF /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		BC4F1F861D73CE0800DAE2DF /* JspathDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JspathDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4F1F8A1D73CE0800DAE2DF /* JspathDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JspathDemoUITests.m; sourceTree = "<group>"; };
 		BC4F1F8C1D73CE0800DAE2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC4F1F981D73D07A00DAE2DF /* JSPatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = JSPatch.framework; sourceTree = "<group>"; };
+		BC4F1F9A1D73D19F00DAE2DF /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		BC4F1F9C1D73D2B100DAE2DF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC4F1F9D1D73D2B100DAE2DF /* libz.tbd in Frameworks */,
+				BC4F1F9B1D73D19F00DAE2DF /* JavaScriptCore.framework in Frameworks */,
+				BC4F1F991D73D07A00DAE2DF /* JSPatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,8 @@
 		BC4F1F591D73CE0800DAE2DF = {
 			isa = PBXGroup;
 			children = (
+				BC4F1F9C1D73D2B100DAE2DF /* libz.tbd */,
+				BC4F1F9A1D73D19F00DAE2DF /* JavaScriptCore.framework */,
 				BC4F1F641D73CE0800DAE2DF /* JspathDemo */,
 				BC4F1F7E1D73CE0800DAE2DF /* JspathDemoTests */,
 				BC4F1F891D73CE0800DAE2DF /* JspathDemoUITests */,
@@ -109,6 +120,7 @@
 				BC4F1F711D73CE0800DAE2DF /* Assets.xcassets */,
 				BC4F1F731D73CE0800DAE2DF /* LaunchScreen.storyboard */,
 				BC4F1F761D73CE0800DAE2DF /* Info.plist */,
+				BC4F1F981D73D07A00DAE2DF /* JSPatch.framework */,
 				BC4F1F651D73CE0800DAE2DF /* Supporting Files */,
 			);
 			path = JspathDemo;
@@ -415,6 +427,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JspathDemo",
+				);
 				INFOPLIST_FILE = JspathDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoziui.JspathDemo;
@@ -426,6 +442,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JspathDemo",
+				);
 				INFOPLIST_FILE = JspathDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoziui.JspathDemo;

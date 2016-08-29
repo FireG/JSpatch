@@ -17,6 +17,39 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [JSPatch startWithAppKey:@"fe981ccab3964ba6"];
+    
+    
+    [JSPatch setupCallback:^(JPCallbackType type, NSDictionary *data, NSError *error) {
+        
+        switch (type) {
+            case JPCallbackTypeUnknow:
+                NSLog(@"*****");
+                break;
+            case JPCallbackTypeRunScript:
+                NSLog(@"执行脚本");
+                break;
+            case JPCallbackTypeUpdate:
+                NSLog(@"已拉取新脚本");
+                break;
+            case JPCallbackTypeCondition:
+                NSLog(@"条件下发");
+                break;
+            case JPCallbackTypeGray:
+                NSLog(@"灰度下发");
+                break;
+                
+            default:
+                break;
+        }
+        
+    }];
+//    [JSPatch setupDevelopment];
+    
+    [JSPatch sync];
+    
+    
     return YES;
 }
 
